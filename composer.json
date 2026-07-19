@@ -1,7 +1,7 @@
 {
-    "name": "igniterlabs/ti-ext-smsnotify",
+    "name": "avisaas/ti-ext-smsnotify",
     "type": "tastyigniter-package",
-    "description": "Send SMS notifications to both restaurant and customer about an order or reservation.",
+    "description": "Send SMS notifications to both restaurant and customer about an order or reservation. (avisaas mirror: adds the avisaas connector, which reports the site domain and version to avisaas.)",
     "license": "MIT",
     "authors": [
         {
@@ -19,7 +19,8 @@
         "tastyigniter/core": "^v4.0",
         "tastyigniter/ti-ext-automation": "^v4.0",
         "twilio/sdk": "~6.0",
-        "vonage/client-core": "^4.11"
+        "vonage/client-core": "^4.11",
+        "avisaas/ti-ext-connector": "^1.3"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.5",
@@ -80,5 +81,8 @@
             "@test:lint",
             "@test:coverage"
         ]
+    },
+    "replace": {
+        "igniterlabs/ti-ext-smsnotify": "self.version"
     }
 }
